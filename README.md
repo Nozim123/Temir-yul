@@ -10,9 +10,6 @@
 
 *Css
 
-*JavaScript
-
-
 Windows:
 
 ```bash

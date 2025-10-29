@@ -1,0 +1,2096 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Practical Bubbly Woodpecker</title>
+    <meta property="og:title" content="Practical Bubbly Woodpecker" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Poppins;
+        font-size: 1rem;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: undefined;
+        text-transform: undefined;
+        letter-spacing: normal;
+        line-height: 1.55;
+        color: var(--color-on-surface);
+        background: var(--color-surface);
+
+        fill: var(--color-on-surface);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="home-container1">
+        <navigation-wrapper class="navigation-wrapper">
+          <!--Navigation component-->
+          <div class="navigation-container1">
+            <div class="navigation-container2">
+              <div class="navigation-container3">
+                <style>
+                  @media (prefers-reduced-motion: reduce) {
+                  .navigation__scanline {
+                    animation: none;
+                  }
+                  * {
+                    transition-duration: 0.01ms !important;
+                    animation-duration: 0.01ms !important;
+                  }
+                  }
+                </style>
+              </div>
+            </div>
+            <nav id="mainNavigation" class="navigation">
+              <div class="navigation__container">
+                <a href="#">
+                  <div
+                    aria-label="Strailways Homepage"
+                    class="navigation__logo"
+                  >
+                    <div class="navigation__logo-glow"></div>
+                    <span class="navigation__logo-text">Strailways</span>
+                    <div class="navigation__logo-underline"></div>
+                  </div>
+                </a>
+                <ul id="navigationMenu" class="navigation__menu">
+                  <li class="navigation__item">
+                    <a href="#destinations">
+                      <div class="navigation__link">
+                        <span class="navigation__link-icon">
+                          <svg
+                            width="18"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="18"
+                            viewBox="0 0 24 24"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <circle r="10" cx="12" cy="12"></circle>
+                              <path
+                                d="M12 2a14.5 14.5 0 0 0 0 20a14.5 14.5 0 0 0 0-20M2 12h20"
+                              ></path>
+                            </g>
+                          </svg>
+                        </span>
+                        <span class="navigation__link-text">Destinations</span>
+                        <span class="navigation__link-glow"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="#routes">
+                      <div class="navigation__link">
+                        <span class="navigation__link-icon">
+                          <svg
+                            width="18"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="18"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0zm.894.211v15M9 3.236v15"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </span>
+                        <span class="navigation__link-text">Routes</span>
+                        <span class="navigation__link-glow"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="#experience">
+                      <div class="navigation__link">
+                        <span class="navigation__link-icon">
+                          <svg
+                            width="18"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="18"
+                            viewBox="0 0 24 24"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path
+                                d="m16.24 7.76l-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"
+                              ></path>
+                              <circle r="10" cx="12" cy="12"></circle>
+                            </g>
+                          </svg>
+                        </span>
+                        <span class="navigation__link-text">Experience</span>
+                        <span class="navigation__link-glow"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="#booking">
+                      <div class="navigation__link">
+                        <span class="navigation__link-icon">
+                          <svg
+                            width="18"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="18"
+                            viewBox="0 0 24 24"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path d="M8 2v4m8-4v4"></path>
+                              <rect
+                                x="3"
+                                y="4"
+                                rx="2"
+                                width="18"
+                                height="18"
+                              ></rect>
+                              <path d="M3 10h18"></path>
+                            </g>
+                          </svg>
+                        </span>
+                        <span class="navigation__link-text">Booking</span>
+                        <span class="navigation__link-glow"></span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+                <div class="navigation__actions">
+                  <button class="btn btn-primary navigation__cta">
+                    Book Journey
+                  </button>
+                </div>
+                <button
+                  id="navigationToggle"
+                  aria-label="Toggle navigation menu"
+                  aria-controls="navigationMenu"
+                  aria-expanded="false"
+                  class="navigation__toggle"
+                >
+                  <span
+                    class="navigation-navigationtoggle-icon1 navigation__toggle-icon--menu"
+                  >
+                    <svg
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M4 5h16M4 12h16M4 19h16"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span class="navigation-navigationtoggle-icon2">
+                    <svg
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M18 6L6 18M6 6l12 12"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span class="navigation-navigationtoggle-glow"></span>
+                </button>
+              </div>
+              <div aria-hidden="true" class="navigation__grid"></div>
+              <div aria-hidden="true" class="navigation__scanline"></div>
+            </nav>
+            <div class="navigation-container4">
+              <div class="navigation-container5">
+                <style>
+                          @keyframes navigationScanline {0% {transform: translateY(-100%);}
+                  100% {transform: translateY(100%);}}
+                </style>
+              </div>
+            </div>
+            <div class="navigation-container6">
+              <div class="navigation-container7">
+                <script defer="" data-name="navigation">
+                  document.addEventListener('DOMContentLoaded', function() {
+                    (function(){
+                      const navigationToggle = document.getElementById("navigationToggle")
+                      const navigationMenu = document.getElementById("navigationMenu")
+
+                      if (navigationToggle && navigationMenu) {
+                        navigationToggle.addEventListener("click", function () {
+                          const isExpanded = this.getAttribute("aria-expanded") === "true"
+                          const newState = !isExpanded
+
+                          this.setAttribute("aria-expanded", newState.toString())
+                          navigationMenu.setAttribute("data-open", newState.toString())
+
+                          if (newState) {
+                            document.body.style.overflow = "hidden"
+                          } else {
+                            document.body.style.overflow = ""
+                          }
+                        })
+
+                        const navigationLinks = navigationMenu.querySelectorAll(".navigation__link")
+                        navigationLinks.forEach(function (link) {
+                          link.addEventListener("click", function () {
+                            navigationToggle.setAttribute("aria-expanded", "false")
+                            navigationMenu.setAttribute("data-open", "false")
+                            document.body.style.overflow = ""
+                          })
+                        })
+
+                        const mediaQuery = window.matchMedia("(min-width: 768px)")
+                        function handleMediaChange(e) {
+                          if (e.matches) {
+                            navigationToggle.setAttribute("aria-expanded", "false")
+                            navigationMenu.setAttribute("data-open", "false")
+                            document.body.style.overflow = ""
+                          }
+                        }
+
+                        mediaQuery.addListener(handleMediaChange)
+                        handleMediaChange(mediaQuery)
+                      }
+                    })()
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </navigation-wrapper>
+        <div class="home-container2">
+          <div class="home-container3">
+            <style>
+              @media (prefers-reduced-motion: reduce) {
+              * {
+                animation: none !important;
+                transition: none !important;
+              }
+              }
+            </style>
+          </div>
+        </div>
+        <section id="hero-section" class="hero-wrapper">
+          <div class="home-hero hero">
+            <div class="hero-visual">
+              <div class="hero-visual-content">
+                <h1 class="home-hero-title">
+                  StraiLways — Uzbekistan by Rail, Reimagined
+                </h1>
+                <p class="hero-subtitle">
+                  Seamless high-speed routes, real-time availability, and
+                  intelligent planning tools that turn journeys into curated
+                  experiences. Book faster, travel smarter, and discover
+                  Uzbekistan on a new frontier of rail.
+                </p>
+              </div>
+            </div>
+            <div class="hero-search">
+              <form
+                role="search"
+                aria-label="QuickSearch routes"
+                class="search-form"
+              >
+                <h2 class="search-title">QuickSearch destination or route</h2>
+                <div class="form-group">
+                  <label for="from-station">From</label>
+                  <input
+                    type="text"
+                    id="from-station"
+                    name="from"
+                    placeholder="Tashkent"
+                    aria-required="true"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="to-station">To</label>
+                  <input
+                    type="text"
+                    id="to-station"
+                    name="to"
+                    placeholder="Samarkand"
+                    aria-required="true"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="depart-date">Depart</label>
+                  <input
+                    type="date"
+                    id="depart-date"
+                    name="depart"
+                    aria-required="true"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="passengers-count">Passengers</label>
+                  <input
+                    type="text"
+                    id="passengers-count"
+                    name="passengers"
+                    placeholder="1 Adult"
+                    aria-required="true"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  aria-label="Search trains"
+                  class="btn btn-primary btn-lg"
+                >
+                  <svg
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="20"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="m21 21l-4.34-4.34"></path>
+                      <circle r="8" cx="11" cy="11"></circle>
+                    </g>
+                  </svg>
+                  <span>Search trains</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section id="onboarding-section" class="onboarding-wrapper">
+          <div class="onboarding">
+            <div class="onboarding-search">
+              <h2 class="home-section-title">
+                Plan with precision. Travel with vision.
+              </h2>
+              <p class="section-content">
+                From station to skyline — find trains across Uzbekistan in
+                seconds.
+              </p>
+              <form aria-label="Plan your journey" class="onboarding-form">
+                <div class="form-field">
+                  <label for="origin-input">Origin</label>
+                  <input
+                    type="text"
+                    id="origin-input"
+                    name="origin"
+                    placeholder="Tashkent Station"
+                    aria-required="true"
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="destination-input">Destination</label>
+                  <input
+                    type="text"
+                    id="destination-input"
+                    name="destination"
+                    placeholder="Samarkand Station"
+                    aria-required="true"
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="departure-input">Departure</label>
+                  <input
+                    type="date"
+                    id="departure-input"
+                    name="departure"
+                    aria-required="true"
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="return-input">Return (optional)</label>
+                  <input type="date" id="return-input" name="return" />
+                </div>
+                <div class="form-field">
+                  <label for="passenger-input">Passengers</label>
+                  <input
+                    type="text"
+                    id="passenger-input"
+                    name="passengers"
+                    value="1 Adult, Economy"
+                    placeholder="1 Adult, Economy"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  aria-label="Search trains"
+                  aria-controls="quick-results"
+                  class="btn btn-primary btn-xl"
+                >
+                  Search trains
+                </button>
+              </form>
+            </div>
+            <div
+              id="quick-results"
+              role="status"
+              aria-live="polite"
+              class="onboarding-results"
+            >
+              <div class="result-card">
+                <div class="result-icon">
+                  <svg
+                    width="28"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="28"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="result-content">
+                  <h3>Real-time Availability</h3>
+                  <p>Live seat maps and instant booking</p>
+                </div>
+              </div>
+              <div class="result-card">
+                <div class="result-icon">
+                  <svg
+                    width="28"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="28"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M12 6v6l4 2"></path>
+                      <circle r="10" cx="12" cy="12"></circle>
+                    </g>
+                  </svg>
+                </div>
+                <div class="result-content">
+                  <h3>Dynamic Fares</h3>
+                  <p>Best prices updated every second</p>
+                </div>
+              </div>
+              <div class="result-card">
+                <div class="result-icon">
+                  <svg
+                    width="28"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="28"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Zm11-4v2m0 10v2m0-8v2"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="result-content">
+                  <h3>Instant Booking</h3>
+                  <p>Secure your seat in under 60 seconds</p>
+                </div>
+              </div>
+              <div class="result-card">
+                <div class="result-icon">
+                  <svg
+                    width="28"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="28"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="3" rx="2" width="16" height="16"></rect>
+                      <path
+                        d="M4 11h16m-8-8v8m-4 8l-2 3m12 0l-2-3m-8-4h.01M16 15h.01"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+                <div class="result-content">
+                  <h3>Smart Routes</h3>
+                  <p>AI-optimized connections across Uzbekistan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="explore-section" class="explore-wrapper">
+          <div class="explore">
+            <div class="explore-left">
+              <div class="explore-hero">
+                <h2 class="home-section-title">Explore Uzbekistan by rail</h2>
+                <p class="section-content">
+                  Curated high-speed routes that turn transit into a
+                  future-forward experience. Browse signature journeys, check
+                  live schedules, and book in seconds.
+                </p>
+              </div>
+              <button class="btn explore-cta btn-lg btn-accent">
+                <svg
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m21 21l-4.34-4.34"></path>
+                    <circle r="8" cx="11" cy="11"></circle>
+                  </g>
+                </svg>
+                <span>Start a quick search</span>
+              </button>
+              <div class="explore-carousel">
+                <div class="carousel-card">
+                  <img
+                    alt="Tilya-Kori Madrasah in Samarkand"
+                    src="https://images.pexels.com/photos/19439196/pexels-photo-19439196.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+                    loading="lazy"
+                  />
+                  <div class="carousel-content">
+                    <h3>Tashkent — Samarkand</h3>
+                    <p>Silk Road in Fast Motion</p>
+                  </div>
+                </div>
+                <div class="carousel-card">
+                  <img
+                    alt="Registan Square architecture"
+                    src="https://images.pexels.com/photos/16681676/pexels-photo-16681676.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+                    loading="lazy"
+                  />
+                  <div class="carousel-content">
+                    <h3>Samarkand — Bukhara</h3>
+                    <p>Timeless Cities, Streamlined Travel</p>
+                  </div>
+                </div>
+                <div class="carousel-card">
+                  <img
+                    alt="Shah-i-Zinda architectural detail"
+                    src="https://images.pexels.com/photos/19439186/pexels-photo-19439186.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+                    loading="lazy"
+                  />
+                  <div class="carousel-content">
+                    <h3>Tashkent — Bukhara</h3>
+                    <p>Heritage &amp; Hyperloop-ready Comfort</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="explore-right">
+              <div class="route-grid">
+                <div class="route-card">
+                  <h3>Tashkent — Bukhara</h3>
+                  <p>Heritage &amp; Hyperloop-ready Comfort</p>
+                  <a href="#">
+                    <div class="route-link"><span>View schedules</span></div>
+                  </a>
+                </div>
+                <div class="route-card">
+                  <h3>Tashkent — Samarkand</h3>
+                  <p>Silk Road in Fast Motion</p>
+                  <a href="#">
+                    <div class="route-link"><span>View schedules</span></div>
+                  </a>
+                </div>
+                <div class="route-card">
+                  <h3>Samarkand — Bukhara</h3>
+                  <p>Timeless Cities, Streamlined Travel</p>
+                  <a href="#">
+                    <div class="route-link"><span>View schedules</span></div>
+                  </a>
+                </div>
+                <div class="route-card">
+                  <h3>Tashkent — Nukus</h3>
+                  <p>Desert Horizons, Intelligent Routing</p>
+                  <a href="#">
+                    <div class="route-link"><span>View schedules</span></div>
+                  </a>
+                </div>
+              </div>
+              <div class="itinerary-list">
+                <h3>Recommended Itineraries</h3>
+                <ul>
+                  <li>
+                    <span>Day Trip: Tashkent to Samarkand</span>
+                    <span class="duration">2h 10m</span>
+                  </li>
+                  <li>
+                    <span>Overnight: Silk Road Circuit</span>
+                    <span class="duration">3 days</span>
+                  </li>
+                  <li>
+                    <span>Weekend: Heritage Cities Tour</span>
+                    <span class="duration">2 days</span>
+                  </li>
+                </ul>
+                <a href="#">
+                  <div class="btn btn-outline btn-sm">
+                    <span>See all itineraries</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="services-section" class="services-wrapper">
+          <div class="services">
+            <div class="services-featured">
+              <h2 class="home-section-title">
+                Seamless journeys, engineered for the future
+              </h2>
+              <p class="section-content">
+                Rail services across Uzbekistan that blend speed, comfort, and
+                intelligent design.
+              </p>
+              <button class="btn btn-primary btn-lg">
+                <span>Explore all services</span>
+              </button>
+            </div>
+            <div class="services-grid">
+              <div class="service-card">
+                <div class="service-icon">
+                  <svg
+                    width="32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="3" rx="2" width="16" height="16"></rect>
+                      <path
+                        d="M4 11h16m-8-8v8m-4 8l-2 3m12 0l-2-3m-8-4h.01M16 15h.01"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+                <h3>Class Options</h3>
+                <p>
+                  Economy Smart, Comfort Plus, Business Suite, and Premium
+                  Sleeper with digital climate control
+                </p>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">
+                  <svg
+                    width="32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 20h.01M2 8.82a15 15 0 0 1 20 0M5 12.859a10 10 0 0 1 14 0m-10.5 3.57a5 5 0 0 1 7 0"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <h3>Onboard Amenities</h3>
+                <p>
+                  Ultra-reliable Wi‑Fi, contactless dining, AR route displays,
+                  and biometric boarding
+                </p>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">
+                  <svg
+                    width="32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle r="1" cx="16" cy="4"></circle>
+                      <path
+                        d="m18 19l1-7l-6 1M5 8l3-3l5.5 3l-2.36 3.5m-6.9 3a5 5 0 0 0 6.88 6"
+                      ></path>
+                      <path d="M13.76 17.5a5 5 0 0 0-6.88-6"></path>
+                    </g>
+                  </svg>
+                </div>
+                <h3>Accessibility &amp; Safety</h3>
+                <p>
+                  Smart safety systems, accessible modules, tactile guidance,
+                  and 24/7 support
+                </p>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">
+                  <svg
+                    width="32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Zm11-4v2m0 10v2m0-8v2"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <h3>Flexible Travel</h3>
+                <p>
+                  Point-to-point, multi-city hops, or modular rail packages with
+                  instant itinerary changes
+                </p>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">
+                  <svg
+                    width="32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8c0 5.5-4.78 10-10 10"
+                      ></path>
+                      <path
+                        d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+                <h3>Sustainable Mobility</h3>
+                <p>
+                  Energy-optimized trains, regenerative braking, and carbon
+                  transparency on every route
+                </p>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">
+                  <svg
+                    width="32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"
+                      ></path>
+                      <rect x="2" y="6" rx="2" width="20" height="14"></rect>
+                    </g>
+                  </svg>
+                </div>
+                <h3>Business Services</h3>
+                <p>
+                  Enterprise portal, reserved business cars with meeting tech,
+                  and bespoke group itineraries
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="pricing-section" class="pricing-wrapper">
+          <div class="pricing">
+            <div class="pricing-hero">
+              <h2 class="home-section-title">
+                Smart fares, transparent pricing
+              </h2>
+              <p class="section-content">
+                Real-time pricing engines and dynamic seat maps so you always
+                see the best available fare for Uzbek rail routes.
+              </p>
+              <div class="fare-preview">
+                <div class="fare-item">
+                  <span class="fare-label">Economy</span>
+                  <span class="fare-price">from $12</span>
+                </div>
+                <div class="fare-item">
+                  <span class="fare-label">Comfort</span>
+                  <span class="fare-price">from $24</span>
+                </div>
+                <div class="fare-item">
+                  <span class="fare-label">Executive</span>
+                  <span class="fare-price">from $48</span>
+                </div>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-icon">
+                <svg
+                  width="28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="28"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M19 5L5 19"></path>
+                    <circle r="2.5" cx="6.5" cy="6.5"></circle>
+                    <circle r="2.5" cx="17.5" cy="17.5"></circle>
+                  </g>
+                </svg>
+              </div>
+              <h3>Seasonal Savings</h3>
+              <p>Automatic discounts during festivals and off-peak windows</p>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-icon">
+                <svg
+                  width="28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="28"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"
+                    ></path>
+                    <circle
+                      r=".5"
+                      cx="7.5"
+                      cy="7.5"
+                      fill="currentColor"
+                    ></circle>
+                  </g>
+                </svg>
+              </div>
+              <h3>Flexible Bundles</h3>
+              <p>
+                Combine seats with add-ons and watch bundle price update live
+              </p>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-icon">
+                <svg
+                  width="28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="28"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="m15.477 12.89l1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"
+                    ></path>
+                    <circle r="6" cx="12" cy="8"></circle>
+                  </g>
+                </svg>
+              </div>
+              <h3>Loyalty Rewards</h3>
+              <p>Earn points on every trip and unlock tiered discounts</p>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-icon">
+                <svg
+                  width="28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="28"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    <rect x="2" y="6" rx="2" width="20" height="14"></rect>
+                  </g>
+                </svg>
+              </div>
+              <h3>Corporate Pricing</h3>
+              <p>
+                Negotiated rates and API for seamless employee travel management
+              </p>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-icon">
+                <svg
+                  width="28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="28"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </div>
+              <h3>Price Assurance</h3>
+              <p>
+                Guaranteed fares at booking with transparent taxes and no hidden
+                fees
+              </p>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-icon">
+                <svg
+                  width="28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="28"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m21 21l-4.34-4.34"></path>
+                    <circle r="8" cx="11" cy="11"></circle>
+                  </g>
+                </svg>
+              </div>
+              <h3>Fare Finder</h3>
+              <p>
+                Simulate dates, classes, and add-ons across popular Uzbek routes
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="news-section" class="news-wrapper">
+          <div class="news">
+            <div class="news-header">
+              <h2 class="home-section-title">News &amp; Updates</h2>
+              <button class="btn btn-outline btn-sm">
+                <svg
+                  width="18"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="18"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10.268 21a2 2 0 0 0 3.464 0m-10.47-5.674A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span>Subscribe to alerts</span>
+              </button>
+            </div>
+            <div
+              role="region"
+              aria-label="Featured notice"
+              class="news-featured"
+            >
+              <img
+                alt="High-speed train in modern station"
+                src="https://images.pexels.com/photos/253647/pexels-photo-253647.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+                loading="lazy"
+              />
+              <div class="featured-content">
+                <span class="featured-badge">
+                  <svg
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="16"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <span>Effective Now</span>
+                </span>
+                <h3>Real-time route optimizations</h3>
+                <p>
+                  AI-driven timetable recalibration across Tashkent–Samarkand
+                  and Bukhara corridors. Expect improved punctuality, dynamic
+                  seat reassignments, and faster connections.
+                </p>
+              </div>
+            </div>
+            <div aria-live="polite" class="news-grid">
+              <article class="news-card">
+                <div class="news-card-icon">
+                  <svg
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="3" rx="2" width="16" height="16"></rect>
+                      <path
+                        d="M4 11h16m-8-8v8m-4 8l-2 3m12 0l-2-3m-8-4h.01M16 15h.01"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+                <h3>New High-Speed Service</h3>
+                <p>
+                  Launching Quantum Express between Tashkent and Nukus on
+                  November 10.
+                </p>
+                <time datetime="2025-11-10">Nov 10, 2025</time>
+              </article>
+              <article class="news-card">
+                <div class="news-card-icon">
+                  <svg
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M12 6v6l4 2"></path>
+                      <circle r="10" cx="12" cy="12"></circle>
+                    </g>
+                  </svg>
+                </div>
+                <h3>Maintenance Notice</h3>
+                <p>
+                  Scheduled track maintenance on Namangan line December 3,
+                  02:00–06:00.
+                </p>
+                <time datetime="2025-12-03">Dec 3, 2025</time>
+              </article>
+              <article class="news-card">
+                <div class="news-card-icon">
+                  <svg
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <h3>Safety Protocols</h3>
+                <p>
+                  Enhanced health protocols active: contactless boarding and
+                  continuous air filtration.
+                </p>
+                <time datetime="2025-01-15">Ongoing</time>
+              </article>
+              <article class="news-card">
+                <div class="news-card-icon">
+                  <svg
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="m15.477 12.89l1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"
+                      ></path>
+                      <circle r="6" cx="12" cy="8"></circle>
+                    </g>
+                  </svg>
+                </div>
+                <h3>Customer Spotlight</h3>
+                <p>
+                  Sofia I. used adaptive rebooking to switch trains in under
+                  five minutes.
+                </p>
+                <time datetime="2025-01-10">Jan 10, 2025</time>
+              </article>
+              <article class="news-card">
+                <div class="news-card-icon">
+                  <svg
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <h3>System Status</h3>
+                <p>
+                  Real-time systems running at 99.98% uptime with instant
+                  updates.
+                </p>
+                <time datetime="2025-01-20">Live</time>
+              </article>
+              <article class="news-card">
+                <div class="news-card-icon">
+                  <svg
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10.268 21a2 2 0 0 0 3.464 0m-10.47-5.674A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <h3>Smart Notifications</h3>
+                <p>
+                  Turn on push updates for delays, gate changes, and
+                  personalized route suggestions.
+                </p>
+                <time datetime="2025-01-20">Available Now</time>
+              </article>
+            </div>
+          </div>
+        </section>
+        <div class="home-container4">
+          <div class="home-container5">
+            <style>
+                      @keyframes scanline {0% {transform: translateY(0);}
+              100% {transform: translateY(100%);}}@keyframes float {0%,100% {transform: translateY(0) translateZ(0);}
+              50% {transform: translateY(-12px) translateZ(10px);}}@keyframes glow-pulse {0% {box-shadow: --shadow-level-1;}
+              100% {box-shadow: var(--shadow-level-1),
+                      0 0 20px color-mix(in srgb, var(--color-accent) 20%, transparent);}}@keyframes shimmer {0% {transform: translateX(-100%);}
+              100% {transform: translateX(100%);}}@keyframes pulse {0%,100% {transform: scale(1);}
+              50% {transform: scale(1.05);}}
+            </style>
+          </div>
+        </div>
+        <div class="home-container6">
+          <div class="home-container7">
+            <script defer="" data-name="homepage-interactions">
+              document.addEventListener('DOMContentLoaded', function() {
+                (function(){
+                  // Parallax effect for hero visual
+                  const heroVisual = document.querySelector(".hero-visual")
+                  if (heroVisual) {
+                    let ticking = false
+                    window.addEventListener("scroll", () => {
+                      if (!ticking) {
+                        window.requestAnimationFrame(() => {
+                          const scrolled = window.pageYOffset
+                          const parallax = scrolled * 0.3
+                          heroVisual.style.setProperty("--parallax", `${parallax}px`)
+                          ticking = false
+                        })
+                        ticking = true
+                      }
+                    })
+                  }
+
+                  // Smooth scroll for internal links
+                  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                    anchor.addEventListener("click", function (e) {
+                      const href = this.getAttribute("href")
+                      if (href !== "#" && href.length > 1) {
+                        e.preventDefault()
+                        const target = document.querySelector(href)
+                        if (target) {
+                          target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                          })
+                        }
+                      }
+                    })
+                  })
+
+                  // Glow effect on focused search inputs
+                  const formInputs = document.querySelectorAll(
+                    'input[type="text"], input[type="date"]'
+                  )
+                  formInputs.forEach((input) => {
+                    input.addEventListener("focus", function () {
+                      this.parentElement.style.setProperty("--input-glow", "1")
+                    })
+                    input.addEventListener("blur", function () {
+                      this.parentElement.style.setProperty("--input-glow", "0")
+                    })
+                  })
+
+                  // Search form submission handler
+                  const searchForms = document.querySelectorAll(
+                    'form[role="search"], .onboarding-form'
+                  )
+                  searchForms.forEach((form) => {
+                    form.addEventListener("submit", function (e) {
+                      e.preventDefault()
+                      const formData = new FormData(this)
+                      console.log("Search initiated:", Object.fromEntries(formData))
+
+                      // Simulate loading state
+                      const submitBtn = this.querySelector('button[type="submit"]')
+                      if (submitBtn) {
+                        const originalText = submitBtn.innerHTML
+                        submitBtn.innerHTML = "<span>Searching...</span>"
+                        submitBtn.disabled = true
+
+                        setTimeout(() => {
+                          submitBtn.innerHTML = originalText
+                          submitBtn.disabled = false
+                        }, 1500)
+                      }
+                    })
+                  })
+
+                  // Intersection Observer for scroll animations
+                  const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: "0px 0px -50px 0px",
+                  }
+
+                  const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                      if (entry.isIntersecting) {
+                        entry.target.style.opacity = "1"
+                        entry.target.style.transform = "translateY(0)"
+                      }
+                    })
+                  }, observerOptions)
+
+                  // Observe section elements
+                  document.querySelectorAll("section").forEach((section) => {
+                    section.style.opacity = "0"
+                    section.style.transform = "translateY(20px)"
+                    section.style.transition = "opacity 0.6s ease, transform 0.6s ease"
+                    observer.observe(section)
+                  })
+
+                  // Live timestamp for news updates
+                  const timestamps = document.querySelectorAll(".news-card time")
+                  timestamps.forEach((time) => {
+                    const datetime = time.getAttribute("datetime")
+                    if (datetime && datetime !== "Live" && datetime !== "Ongoing") {
+                      const date = new Date(datetime)
+                      const now = new Date()
+                      const diff = Math.floor((now - date) / (1000 * 60 * 60 * 24))
+
+                      if (diff === 0) {
+                        time.textContent = "Today"
+                      } else if (diff === 1) {
+                        time.textContent = "Yesterday"
+                      } else if (diff < 7) {
+                        time.textContent = `${diff} days ago`
+                      }
+                    }
+                  })
+
+                  // Enhanced carousel scroll behavior
+                  const carousels = document.querySelectorAll(".explore-carousel")
+                  carousels.forEach((carousel) => {
+                    let isDown = false
+                    let startX
+                    let scrollLeft
+
+                    carousel.addEventListener("mousedown", (e) => {
+                      isDown = true
+                      carousel.style.cursor = "grabbing"
+                      startX = e.pageX - carousel.offsetLeft
+                      scrollLeft = carousel.scrollLeft
+                    })
+
+                    carousel.addEventListener("mouseleave", () => {
+                      isDown = false
+                      carousel.style.cursor = "grab"
+                    })
+
+                    carousel.addEventListener("mouseup", () => {
+                      isDown = false
+                      carousel.style.cursor = "grab"
+                    })
+
+                    carousel.addEventListener("mousemove", (e) => {
+                      if (!isDown) return
+                      e.preventDefault()
+                      const x = e.pageX - carousel.offsetLeft
+                      const walk = (x - startX) * 2
+                      carousel.scrollLeft = scrollLeft - walk
+                    })
+                  })
+                })()
+              });
+            </script>
+          </div>
+        </div>
+        <footer-wrapper class="footer-wrapper">
+          <!--Footer component-->
+          <div class="footer-container1">
+            <div class="footer-container2">
+              <div class="footer-container3">
+                <style>
+                  @media (prefers-reduced-motion: reduce) {
+                  .footer-grid-pattern, .footer-logo-glow, .footer-divider-line, .footer-social-link::before, .footer-trust-badge::before {
+                    animation: none;
+                  }
+                  .footer-social-link:hover, .footer-trust-badge:hover, .footer-contact-item:hover .footer-contact-icon {
+                    transform: none;
+                  }
+                  }
+                </style>
+              </div>
+            </div>
+            <footer id="footer-strailways" class="footer-container">
+              <div class="footer-glow-overlay"></div>
+              <div class="footer-grid-pattern"></div>
+              <div class="footer-content-wrapper">
+                <div class="footer-main-grid">
+                  <div class="footer-brand-section">
+                    <div class="footer-logo-wrapper">
+                      <div class="footer-logo-icon">
+                        <svg
+                          width="32"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="32"
+                          viewBox="0 0 24 24"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <rect
+                              x="4"
+                              y="3"
+                              rx="2"
+                              width="16"
+                              height="16"
+                            ></rect>
+                            <path
+                              d="M4 11h16m-8-8v8m-4 8l-2 3m12 0l-2-3m-8-4h.01M16 15h.01"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                      <h3 class="footer-brand-name">Strailways</h3>
+                    </div>
+                    <p class="footer-brand-tagline">
+                      Next-Generation Rail Travel Experience
+                    </p>
+                    <p class="footer-brand-description">
+                      Connecting destinations with cutting-edge technology and
+                      seamless travel solutions for the modern explorer.
+                    </p>
+                    <div class="footer-social-grid">
+                      <a href="#">
+                        <div aria-label="Facebook" class="footer-social-link">
+                          <svg
+                            width="20"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="20"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </div>
+                      </a>
+                      <a href="#">
+                        <div aria-label="Twitter" class="footer-social-link">
+                          <svg
+                            width="20"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="20"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6c2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4c-.9-4.2 4-6.6 7-3.8c1.1 0 3-1.2 3-1.2"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </div>
+                      </a>
+                      <a href="#">
+                        <div aria-label="Instagram" class="footer-social-link">
+                          <svg
+                            width="20"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="20"
+                            viewBox="0 0 24 24"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <rect
+                                x="2"
+                                y="2"
+                                rx="5"
+                                ry="5"
+                                width="20"
+                                height="20"
+                              ></rect>
+                              <path
+                                d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37m1.5-4.87h.01"
+                              ></path>
+                            </g>
+                          </svg>
+                        </div>
+                      </a>
+                      <a href="#">
+                        <div aria-label="LinkedIn" class="footer-social-link">
+                          <svg
+                            width="20"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="20"
+                            viewBox="0 0 24 24"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path
+                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"
+                              ></path>
+                              <circle r="2" cx="4" cy="4"></circle>
+                            </g>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="footer-links-section">
+                    <h4 class="footer-section-title">Quick Links</h4>
+                    <ul class="footer-links-list">
+                      <li>
+                        <a href="#">
+                          <div class="footer-link"><span>About Us</span></div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="footer-link">
+                            <span>Our Services</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="footer-link">
+                            <span>Destinations</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="footer-link"><span>Schedule</span></div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="footer-link"><span>Pricing</span></div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="footer-link"><span>Contact</span></div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer-links-section">
+                    <h4 class="footer-section-title">Travel Services</h4>
+                    <ul class="footer-links-list">
+                      <li>
+                        <a href="#">
+                          <div class="footer-link">
+                            <span>Book Tickets</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="footer-link">
+                            <span>Route Planning</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="footer-link">
+                            <span>Travel Insurance</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="footer-link">
+                            <span>Group Bookings</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="footer-link">
+                            <span>Special Offers</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="footer-link">
+                            <span>Loyalty Program</span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer-contact-section">
+                    <h4 class="footer-section-title">Contact Info</h4>
+                    <div class="footer-contact-list">
+                      <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                          <svg
+                            width="20"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="20"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233a14 14 0 0 0 6.392 6.384"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div class="footer-contact-text">
+                          <span class="footer-contact-label">Phone</span>
+                          <span class="footer-contact-value">
+                            +998 71 123 4567
+                          </span>
+                        </div>
+                      </div>
+                      <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                          <svg
+                            width="20"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="20"
+                            viewBox="0 0 24 24"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path
+                                d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"
+                              ></path>
+                              <rect
+                                x="2"
+                                y="4"
+                                rx="2"
+                                width="20"
+                                height="16"
+                              ></rect>
+                            </g>
+                          </svg>
+                        </div>
+                        <div class="footer-contact-text">
+                          <span class="footer-contact-label">Email</span>
+                          <span class="footer-contact-value">
+                            info@strailways.uz
+                          </span>
+                        </div>
+                      </div>
+                      <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                          <svg
+                            width="20"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="20"
+                            viewBox="0 0 24 24"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path
+                                d="M17.97 9.304A8 8 0 0 0 2 10c0 4.69 4.887 9.562 7.022 11.468m12.356-4.842a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"
+                              ></path>
+                              <circle r="3" cx="10" cy="10"></circle>
+                            </g>
+                          </svg>
+                        </div>
+                        <div class="footer-contact-text">
+                          <span class="footer-contact-label">Location</span>
+                          <span class="footer-contact-value">
+                            Tashkent, Uzbekistan
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-trust-section">
+                  <div class="footer-trust-badge">
+                    <div class="footer-trust-icon">
+                      <svg
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </div>
+                    <span class="footer-trust-text">Secure Booking</span>
+                  </div>
+                  <div class="footer-trust-badge">
+                    <div class="footer-trust-icon">
+                      <svg
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle r="10" cx="12" cy="12"></circle>
+                          <path
+                            d="M12 2a14.5 14.5 0 0 0 0 20a14.5 14.5 0 0 0 0-20M2 12h20"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <span class="footer-trust-text">Global Network</span>
+                  </div>
+                  <div class="footer-trust-badge">
+                    <div class="footer-trust-icon">
+                      <svg
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <rect
+                            x="4"
+                            y="3"
+                            rx="2"
+                            width="16"
+                            height="16"
+                          ></rect>
+                          <path
+                            d="M4 11h16m-8-8v8m-4 8l-2 3m12 0l-2-3m-8-4h.01M16 15h.01"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <span class="footer-trust-text">Premium Service</span>
+                  </div>
+                  <div class="footer-trust-badge">
+                    <div class="footer-trust-icon">
+                      <svg
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </div>
+                    <span class="footer-trust-text">24/7 Support</span>
+                  </div>
+                </div>
+                <div class="footer-divider">
+                  <div class="footer-divider-line"></div>
+                </div>
+                <div class="footer-bottom-bar">
+                  <div class="footer-copyright">
+                    <p class="footer-copyright-text">
+                      &amp;copy; 2025 Strailways. All rights reserved.
+                    </p>
+                  </div>
+                  <nav aria-label="Legal Links" class="footer-legal-links">
+                    <a href="#">
+                      <div class="footer-legal-link">
+                        <span>Privacy Policy</span>
+                      </div>
+                    </a>
+                    <span class="footer-legal-separator">|</span>
+                    <a href="#">
+                      <div class="footer-legal-link">
+                        <span>Terms of Service</span>
+                      </div>
+                    </a>
+                    <span class="footer-legal-separator">|</span>
+                    <a href="#">
+                      <div class="footer-legal-link">
+                        <span>Cookie Policy</span>
+                      </div>
+                    </a>
+                    <span class="footer-legal-separator">|</span>
+                    <a href="#">
+                      <div class="footer-legal-link">
+                        <span>Accessibility</span>
+                      </div>
+                    </a>
+                  </nav>
+                </div>
+              </div>
+            </footer>
+            <div class="footer-container4">
+              <div class="footer-container5">
+                <style>
+                          @keyframes footer-grid-pulse {0%,100% {opacity: 0.4;}
+                  50% {opacity: 0.2;}}@keyframes footer-logo-glow {0%,100% {box-shadow: 0 0 20px
+                          color-mix(in srgb, var(--color-primary) 20%, transparent);}
+                  50% {box-shadow: 0 0 30px
+                          color-mix(in srgb, var(--color-primary) 35%, transparent);}}@keyframes footer-divider-slide {0% {transform: translateX(-100%);}
+                  100% {transform: translateX(100%);}}
+                </style>
+              </div>
+            </div>
+            <div class="footer-container6">
+              <div class="footer-container7">
+                <script defer="" data-name="footer-strailways">
+                  document.addEventListener('DOMContentLoaded', function() {
+                    (function(){
+                      // Intersection Observer for staggered animations on scroll
+                      const observerOptions = {
+                        threshold: 0.1,
+                        rootMargin: "0px 0px -50px 0px",
+                      }
+
+                      const animateOnScroll = (entries, observer) => {
+                        entries.forEach((entry, index) => {
+                          if (entry.isIntersecting) {
+                            setTimeout(() => {
+                              entry.target.style.opacity = "1"
+                              entry.target.style.transform = "translateY(0)"
+                            }, index * 100)
+                            observer.unobserve(entry.target)
+                          }
+                        })
+                      }
+
+                      const observer = new IntersectionObserver(animateOnScroll, observerOptions)
+
+                      // Observe footer sections
+                      const footerSections = document.querySelectorAll(
+                        ".footer-links-section, .footer-contact-section"
+                      )
+                      footerSections.forEach((section) => {
+                        section.style.opacity = "0"
+                        section.style.transform = "translateY(20px)"
+                        section.style.transition = "opacity 0.6s ease, transform 0.6s ease"
+                        observer.observe(section)
+                      })
+
+                      // Observe trust badges
+                      const trustBadges = document.querySelectorAll(".footer-trust-badge")
+                      trustBadges.forEach((badge, index) => {
+                        badge.style.opacity = "0"
+                        badge.style.transform = "translateY(20px)"
+                        badge.style.transition = "opacity 0.6s ease, transform 0.6s ease"
+                        setTimeout(() => {
+                          observer.observe(badge)
+                        }, index * 50)
+                      })
+
+                      // Add dynamic glow effect to contact icons on hover
+                      const contactItems = document.querySelectorAll(".footer-contact-item")
+                      contactItems.forEach((item) => {
+                        item.addEventListener("mouseenter", function () {
+                          const icon = this.querySelector(".footer-contact-icon")
+                          icon.style.transition = "all 0.3s ease"
+                        })
+                      })
+
+                      // Parallax effect for grid pattern
+                      let ticking = false
+                      const gridPattern = document.querySelector(".footer-grid-pattern")
+
+                      const updateParallax = () => {
+                        const scrolled = window.pageYOffset
+                        const footerOffset = document.getElementById("footer-strailways").offsetTop
+                        const rate = (scrolled - footerOffset) * 0.1
+
+                        if (gridPattern) {
+                          gridPattern.style.transform = `translateY(${rate}px)`
+                        }
+                        ticking = false
+                      }
+
+                      const requestParallax = () => {
+                        if (!ticking) {
+                          requestAnimationFrame(updateParallax)
+                          ticking = true
+                        }
+                      }
+
+                      window.addEventListener("scroll", requestParallax, { passive: true })
+
+                      // Enhanced keyboard navigation for links
+                      const footerLinks = document.querySelectorAll(
+                        ".footer-link, .footer-social-link, .footer-legal-link"
+                      )
+                      footerLinks.forEach((link) => {
+                        link.addEventListener("focus", function () {
+                          this.style.outline = "2px solid var(--color-accent)"
+                          this.style.outlineOffset = "4px"
+                        })
+
+                        link.addEventListener("blur", function () {
+                          this.style.outline = ""
+                          this.style.outlineOffset = ""
+                        })
+                      })
+                    })()
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </footer-wrapper>
+        <a href="https://play.teleporthq.io/signup">
+          <div aria-label="Sign up to TeleportHQ" class="home-container8">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 19 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="home-icon96"
+            >
+              <path
+                d="M9.1017 4.64355H2.17867C0.711684 4.64355 -0.477539 5.79975 -0.477539 7.22599V13.9567C-0.477539 15.3829 0.711684 16.5391 2.17867 16.5391H9.1017C10.5687 16.5391 11.7579 15.3829 11.7579 13.9567V7.22599C11.7579 5.79975 10.5687 4.64355 9.1017 4.64355Z"
+                fill="#B23ADE"
+              ></path>
+              <path
+                d="M10.9733 12.7878C14.4208 12.7878 17.2156 10.0706 17.2156 6.71886C17.2156 3.3671 14.4208 0.649963 10.9733 0.649963C7.52573 0.649963 4.73096 3.3671 4.73096 6.71886C4.73096 10.0706 7.52573 12.7878 10.9733 12.7878Z"
+                fill="#FF5C5C"
+              ></path>
+              <path
+                d="M17.7373 13.3654C19.1497 14.1588 19.1497 15.4634 17.7373 16.2493L10.0865 20.5387C8.67402 21.332 7.51855 20.6836 7.51855 19.0968V10.5141C7.51855 8.92916 8.67402 8.2807 10.0865 9.07221L17.7373 13.3654Z"
+                fill="#2874DE"
+              ></path>
+            </svg>
+            <span class="home-text99">Built in TeleportHQ</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

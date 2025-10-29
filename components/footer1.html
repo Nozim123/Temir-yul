@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Practical Bubbly Woodpecker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Poppins;
+        font-size: 1rem;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: undefined;
+        text-transform: undefined;
+        letter-spacing: normal;
+        line-height: 1.55;
+        color: var(--color-on-surface);
+        background: var(--color-surface);
+
+        fill: var(--color-on-surface);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="../style.css" />
+    <div>
+      <link href="./footer1.css" rel="stylesheet" />
+      <div class="footer1-container1">
+        <div class="footer1-container2">
+          <div class="footer1-container3">
+            <style>
+              @media (prefers-reduced-motion: reduce) {
+              .footer-grid-pattern, .footer-logo-glow, .footer-divider-line, .footer-social-link::before, .footer-trust-badge::before {
+                animation: none;
+              }
+              .footer-social-link:hover, .footer-trust-badge:hover, .footer-contact-item:hover .footer-contact-icon {
+                transform: none;
+              }
+              }
+            </style>
+          </div>
+        </div>
+        <footer id="footer-strailways" class="footer1-footer-container">
+          <div class="footer-glow-overlay"></div>
+          <div class="footer-grid-pattern"></div>
+          <div class="footer1-footer-content-wrapper">
+            <div class="footer1-footer-main-grid">
+              <div class="footer1-footer-brand-section">
+                <div class="footer1-footer-logo-wrapper">
+                  <div class="footer1-footer-logo-icon">
+                    <svg
+                      width="32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="3" rx="2" width="16" height="16"></rect>
+                        <path
+                          d="M4 11h16m-8-8v8m-4 8l-2 3m12 0l-2-3m-8-4h.01M16 15h.01"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <h3 class="footer1-footer-brand-name">Strailways</h3>
+                </div>
+                <p class="footer1-footer-brand-tagline">
+                  Next-Generation Rail Travel Experience
+                </p>
+                <p class="footer1-footer-brand-description">
+                  Connecting destinations with cutting-edge technology and
+                  seamless travel solutions for the modern explorer.
+                </p>
+                <div class="footer1-footer-social-grid">
+                  <a href="#">
+                    <div
+                      aria-label="Facebook"
+                      class="footer1-footer-social-link"
+                    >
+                      <svg
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div
+                      aria-label="Twitter"
+                      class="footer1-footer-social-link"
+                    >
+                      <svg
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6c2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4c-.9-4.2 4-6.6 7-3.8c1.1 0 3-1.2 3-1.2"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div
+                      aria-label="Instagram"
+                      class="footer1-footer-social-link"
+                    >
+                      <svg
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <rect
+                            x="2"
+                            y="2"
+                            rx="5"
+                            ry="5"
+                            width="20"
+                            height="20"
+                          ></rect>
+                          <path
+                            d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37m1.5-4.87h.01"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div
+                      aria-label="LinkedIn"
+                      class="footer1-footer-social-link"
+                    >
+                      <svg
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"
+                          ></path>
+                          <circle r="2" cx="4" cy="4"></circle>
+                        </g>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="footer1-footer-links-section">
+                <h4 class="footer1-footer-section-title">Quick Links</h4>
+                <ul class="footer1-footer-links-list">
+                  <li>
+                    <a href="#">
+                      <div class="footer1-footer-link">
+                        <span>About Us</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="footer1-footer-link">
+                        <span>Our Services</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="footer1-footer-link">
+                        <span>Destinations</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="footer1-footer-link">
+                        <span>Schedule</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="footer1-footer-link">
+                        <span>Pricing</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="footer1-footer-link">
+                        <span>Contact</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer1-footer-links-section">
+                <h4 class="footer1-footer-section-title">Travel Services</h4>
+                <ul class="footer1-footer-links-list">
+                  <li>
+                    <a href="#">
+                      <div class="footer1-footer-link">
+                        <span>Book Tickets</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="footer1-footer-link">
+                        <span>Route Planning</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="footer1-footer-link">
+                        <span>Travel Insurance</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="footer1-footer-link">
+                        <span>Group Bookings</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="footer1-footer-link">
+                        <span>Special Offers</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="footer1-footer-link">
+                        <span>Loyalty Program</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer1-footer-contact-section">
+                <h4 class="footer1-footer-section-title">Contact Info</h4>
+                <div class="footer1-footer-contact-list">
+                  <div class="footer1-footer-contact-item">
+                    <div class="footer1-footer-contact-icon">
+                      <svg
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233a14 14 0 0 0 6.392 6.384"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="footer-contact-text">
+                      <span class="footer1-footer-contact-label">Phone</span>
+                      <span class="footer1-footer-contact-value">
+                        +998 71 123 4567
+                      </span>
+                    </div>
+                  </div>
+                  <div class="footer1-footer-contact-item">
+                    <div class="footer1-footer-contact-icon">
+                      <svg
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"
+                          ></path>
+                          <rect
+                            x="2"
+                            y="4"
+                            rx="2"
+                            width="20"
+                            height="16"
+                          ></rect>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="footer-contact-text">
+                      <span class="footer1-footer-contact-label">Email</span>
+                      <span class="footer1-footer-contact-value">
+                        info@strailways.uz
+                      </span>
+                    </div>
+                  </div>
+                  <div class="footer1-footer-contact-item">
+                    <div class="footer1-footer-contact-icon">
+                      <svg
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M17.97 9.304A8 8 0 0 0 2 10c0 4.69 4.887 9.562 7.022 11.468m12.356-4.842a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"
+                          ></path>
+                          <circle r="3" cx="10" cy="10"></circle>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="footer-contact-text">
+                      <span class="footer1-footer-contact-label">Location</span>
+                      <span class="footer1-footer-contact-value">
+                        Tashkent, Uzbekistan
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer1-footer-trust-section">
+              <div class="footer1-footer-trust-badge">
+                <div class="footer1-footer-trust-icon">
+                  <svg
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="footer1-footer-trust-text">Secure Booking</span>
+              </div>
+              <div class="footer1-footer-trust-badge">
+                <div class="footer1-footer-trust-icon">
+                  <svg
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle r="10" cx="12" cy="12"></circle>
+                      <path
+                        d="M12 2a14.5 14.5 0 0 0 0 20a14.5 14.5 0 0 0 0-20M2 12h20"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+                <span class="footer1-footer-trust-text">Global Network</span>
+              </div>
+              <div class="footer1-footer-trust-badge">
+                <div class="footer1-footer-trust-icon">
+                  <svg
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="4" y="3" rx="2" width="16" height="16"></rect>
+                      <path
+                        d="M4 11h16m-8-8v8m-4 8l-2 3m12 0l-2-3m-8-4h.01M16 15h.01"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+                <span class="footer1-footer-trust-text">Premium Service</span>
+              </div>
+              <div class="footer1-footer-trust-badge">
+                <div class="footer1-footer-trust-icon">
+                  <svg
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="footer1-footer-trust-text">24/7 Support</span>
+              </div>
+            </div>
+            <div class="footer-divider">
+              <div class="footer-divider-line"></div>
+            </div>
+            <div class="footer1-footer-bottom-bar">
+              <div class="footer-copyright">
+                <p class="footer1-footer-copyright-text">
+                  &amp;copy; 2025 Strailways. All rights reserved.
+                </p>
+              </div>
+              <nav aria-label="Legal Links" class="footer1-footer-legal-links">
+                <a href="#">
+                  <div class="footer1-footer-legal-link">
+                    <span>Privacy Policy</span>
+                  </div>
+                </a>
+                <span class="footer1-footer-legal-separator">|</span>
+                <a href="#">
+                  <div class="footer1-footer-legal-link">
+                    <span>Terms of Service</span>
+                  </div>
+                </a>
+                <span class="footer1-footer-legal-separator">|</span>
+                <a href="#">
+                  <div class="footer1-footer-legal-link">
+                    <span>Cookie Policy</span>
+                  </div>
+                </a>
+                <span class="footer1-footer-legal-separator">|</span>
+                <a href="#">
+                  <div class="footer1-footer-legal-link">
+                    <span>Accessibility</span>
+                  </div>
+                </a>
+              </nav>
+            </div>
+          </div>
+        </footer>
+        <div class="footer1-container4">
+          <div class="footer1-container5">
+            <style>
+                      @keyframes footer-grid-pulse {0%,100% {opacity: 0.4;}
+              50% {opacity: 0.2;}}@keyframes footer-logo-glow {0%,100% {box-shadow: 0 0 20px
+                      color-mix(in srgb, var(--color-primary) 20%, transparent);}
+              50% {box-shadow: 0 0 30px
+                      color-mix(in srgb, var(--color-primary) 35%, transparent);}}@keyframes footer-divider-slide {0% {transform: translateX(-100%);}
+              100% {transform: translateX(100%);}}
+            </style>
+          </div>
+        </div>
+        <div class="footer1-container6">
+          <div class="footer1-container7">
+            <script defer="" data-name="footer-strailways">
+              document.addEventListener('DOMContentLoaded', function() {
+                (function(){
+                  // Intersection Observer for staggered animations on scroll
+                  const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: "0px 0px -50px 0px",
+                  }
+
+                  const animateOnScroll = (entries, observer) => {
+                    entries.forEach((entry, index) => {
+                      if (entry.isIntersecting) {
+                        setTimeout(() => {
+                          entry.target.style.opacity = "1"
+                          entry.target.style.transform = "translateY(0)"
+                        }, index * 100)
+                        observer.unobserve(entry.target)
+                      }
+                    })
+                  }
+
+                  const observer = new IntersectionObserver(animateOnScroll, observerOptions)
+
+                  // Observe footer sections
+                  const footerSections = document.querySelectorAll(
+                    ".footer-links-section, .footer-contact-section"
+                  )
+                  footerSections.forEach((section) => {
+                    section.style.opacity = "0"
+                    section.style.transform = "translateY(20px)"
+                    section.style.transition = "opacity 0.6s ease, transform 0.6s ease"
+                    observer.observe(section)
+                  })
+
+                  // Observe trust badges
+                  const trustBadges = document.querySelectorAll(".footer-trust-badge")
+                  trustBadges.forEach((badge, index) => {
+                    badge.style.opacity = "0"
+                    badge.style.transform = "translateY(20px)"
+                    badge.style.transition = "opacity 0.6s ease, transform 0.6s ease"
+                    setTimeout(() => {
+                      observer.observe(badge)
+                    }, index * 50)
+                  })
+
+                  // Add dynamic glow effect to contact icons on hover
+                  const contactItems = document.querySelectorAll(".footer-contact-item")
+                  contactItems.forEach((item) => {
+                    item.addEventListener("mouseenter", function () {
+                      const icon = this.querySelector(".footer-contact-icon")
+                      icon.style.transition = "all 0.3s ease"
+                    })
+                  })
+
+                  // Parallax effect for grid pattern
+                  let ticking = false
+                  const gridPattern = document.querySelector(".footer-grid-pattern")
+
+                  const updateParallax = () => {
+                    const scrolled = window.pageYOffset
+                    const footerOffset = document.getElementById("footer-strailways").offsetTop
+                    const rate = (scrolled - footerOffset) * 0.1
+
+                    if (gridPattern) {
+                      gridPattern.style.transform = `translateY(${rate}px)`
+                    }
+                    ticking = false
+                  }
+
+                  const requestParallax = () => {
+                    if (!ticking) {
+                      requestAnimationFrame(updateParallax)
+                      ticking = true
+                    }
+                  }
+
+                  window.addEventListener("scroll", requestParallax, { passive: true })
+
+                  // Enhanced keyboard navigation for links
+                  const footerLinks = document.querySelectorAll(
+                    ".footer-link, .footer-social-link, .footer-legal-link"
+                  )
+                  footerLinks.forEach((link) => {
+                    link.addEventListener("focus", function () {
+                      this.style.outline = "2px solid var(--color-accent)"
+                      this.style.outlineOffset = "4px"
+                    })
+
+                    link.addEventListener("blur", function () {
+                      this.style.outline = ""
+                      this.style.outlineOffset = ""
+                    })
+                  })
+                })()
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
